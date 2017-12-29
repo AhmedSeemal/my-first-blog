@@ -1,26 +1,34 @@
+{% load staticfiles %}
 <html>
     <head>
         <title>Django Girls blog</title>
     </head>
     <body>
-        <div>
-            <h3><a href="/">Django Girls Blog</a></h3>
+        <div class="page-header">
+            <h1><a href="/">Django Girls Blog</a></h1>
         </div>
         <div>
 	<div>
-		<h2>Dynamic contents below</h2>
+		<h2 class="text-info">Dynamic contents below</h2>
        		  <!--<em>{{posts}}</em> -->
 		<h3>
 		   {% for i in posts %}
 		   	<div class="posts">
-	   		     <ul>
-	   		     	<li>{{i.title}}</li>
-				<li>{{i.name}}</li>
-	   		     	<li>{{i.text}}</li>
+	   		     <ul class="list-group">
+	   		     	<li class="list-group-item list-group-item-success">{{i.title}}</li>
+				<li class="list-group-item list-group-item-info">{{i.name}}</li>
+	   		     	<li class="list-group-item list-group-item-warning">{{i.text}}</li>
+	   		     	
                              </ul>
 		   	</div>	
            	   {%	endfor %}
 		</h3> 	
 	</div>
     </body>
+    <footer>
+    	<link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    	<link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">	
+    </foooter>
 </html>

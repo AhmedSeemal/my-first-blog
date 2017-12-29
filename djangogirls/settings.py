@@ -25,7 +25,7 @@ SECRET_KEY = 't)9ik1^)%l0-*%7llgyhotqn11z3-bj7#6+uj16u#!j7(i@&9@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['ahmedseemal.pythonanywhere.com']
+ALLOWED_HOSTS = ['ahmedseemal.pythonanywhere.com','127.0.0.1']
 
 
 # Application definition
@@ -55,7 +55,7 @@ ROOT_URLCONF = 'djangogirls.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'NAME': os.path.join(BASE_DIR, 'templates'),
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
